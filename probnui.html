@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header{
+        font-family: sans-serif;
+        text-transform: uppercase; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .right_side{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+  
+       .together{
+        position: relative; 
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    nav{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px;
+        border-radius: 10px;
+        opacity: 0;
+        pointer-events: none;
+        top: 50px;
+   
+    }
+    nav.active{
+        opacity: 1;
+         pointer-events: auto;
+    }
+    .arrow_down{
+        display: block;
+    }
+    .arrow_up{
+        display: none;
+    }
+    .naviga.active .arrow_down{
+        display: none;
+    }
+    .naviga.active .arrow_up{
+        display: block;
+    }
+    
+</style>
+<body>
+    <header>
+        <img src="logo.png" alt="logo" width="250px">
+            <div class="right_side">
+                <div class="together">
+                    <span><b>explore</b></span>
+                    <div class="naviga" id="naviga">
+                        <img src="arrow_down.png" class="arrow_down" width="15px">
+                        <img src="arrow_up.png" class="arrow_up" width="20px">
+                    </div>
+                    <nav id="nav">
+                        <span style="cursor: pointer;">learning paths</span>
+                        <span  style="cursor: pointer;">challenges</span>
+                        <span  style="cursor: pointer;">solutions</span>
+                        <span  style="cursor: pointer;">artices</span>
+                        <span  style="cursor: pointer;">guides</span>
+                    </nav>
+                </div>
+                <div class="together">
+                    <span><b>for companies</b></span>
+                    <div class="naviga" id="naviga">
+                        <img src="arrow_down.png" class="arrow_down" width="15px">
+                        <img src="arrow_up.png" class="arrow_up" width="20px">
+                    </div>
+                    <nav id="nav">
+                        <span style="cursor: pointer;">learning paths</span>
+                        <span  style="cursor: pointer;">challenges</span>
+                        <span  style="cursor: pointer;">solutions</span>
+                        <span  style="cursor: pointer;">artices</span>
+                        <span  style="cursor: pointer;">guides</span>
+                    </nav>
+                </div>
+                    <h4><b>unlock <span style="background-color: rgb(36, 36, 188); color: white; padding: 4px; border-radius: 5px;">pro</span> </b></h4>
+            </div>
+    </header>
+    <script>
+       const dropdowns = document.querySelectorAll(".together");
+        dropdowns.forEach(drop => {
+            const button = drop.querySelector(".naviga");
+            const menu = drop.querySelector("nav");
+
+            button.addEventListener("click", () => {
+                button.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

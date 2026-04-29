@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode</title>
+
+<style>
+    body{
+        font-family: sans-serif;
+        transition: 0.3s;
+        background: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body.dark{
+        background: #111;
+        color: white;
+    }
+
+    button{
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+</head>
+
+<body>
+
+<button id="toggle">Switch Theme</button>
+
+<script>
+    const btn = document.getElementById("toggle");
+
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
+</script>
+
+</body>
+</html>

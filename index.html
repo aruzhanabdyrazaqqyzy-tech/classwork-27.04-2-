@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: whitesmoke;
+        }
+        main{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        header{
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .right_side{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+        .together{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            position: relative;
+            align-items: center;
+        }
+        nav{
+            position: absolute;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0;
+            top: 40px;
+            right: 0;
+            padding: 10px;
+            opacity: 0;
+            pointer-events: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            transition: 0.3s;
+        }
+
+        nav.active{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .arrow_down{
+            display: block;
+        }
+        .arrow_up{
+            display: none;
+        }
+        .arrows.active .arrow_down{
+            display: none;
+        }
+        .arrows.active .arrow_up{
+            display: block;
+        }
+        .second_header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px 0 20px ; 
+        }
+        .text{
+            display: flex;
+            gap: 20px;
+        }
+        .first_row{
+
+        }
+        .container_num1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+           
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid grey;
+        }
+        .container_num2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+           
+            padding: 20px;
+            margin: 10px;
+            text-align: left;
+            border: 1px solid grey;
+        }
+        .queue{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+        .container_num3{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: left;
+            border: 1px solid grey;
+        }
+        .second_row{
+            width: 50%;
+        }
+        .first_container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .second_container{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: left;
+            border: 1px solid grey;
+            text-align: center;
+        }
+        .under{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 25px;
+        }
+        .right p{
+            color: gray;
+        }
+        .third_row{
+            margin-top: 10px;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo" width="250px">
+        <div class="right_side">
+            <div class="together">
+                <span><b>explore</b></span>
+                <div class="arrows">
+                    <img src="arrow_down.png" class="arrow_down" width="15px">
+                    <img src="arrow_up.png" class="arrow_up" width="25px">
+                </div>
+                    <nav>
+                        <span>learning paths</span>
+                        <span>challenges</span>
+                        <span>solutions</span>
+                        <span>articles</span>
+                        <span>guides</span>
+                    </nav>
+            </div>
+            <div class="together">
+                <span><b>for companies</b></span>
+                <div class="arrows">
+                    <img src="arrow_down.png" class="arrow_down" width="15px">
+                    <img src="arrow_up.png" class="arrow_up" width="25px">
+                </div>
+                    <nav>
+                        <span>hire developers</span>
+                        <span>train developers</span>
+                    </nav>
+            </div>
+                <h4>unlock <span style="background-color: rgb(1, 1, 175); color: white; padding: 4px; border-radius: 3px;">pro</span></h4>
+            <div class="together">
+                <img src="icon_1.png" alt="icon_1" width="150px">
+                <div class="arrows">
+                    <img src="arrow_down.png" class="arrow_down" width="15px">
+                    <img src="arrow_up.png" class="arrow_up" width="25px">
+                </div>
+                <nav>
+                    <span>home</span>
+                    <span>profile</span>
+                    <span>setting</span>
+                    <span style="color: red;">sign out</span>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <div class="second_header">
+        <span style="text-transform: uppercase; border: 1px solid gray; padding: 15px;">home</span>
+        <div class="text">
+            <span>Feeds</span>
+            <span>My learning paths</span>
+            <span>My challenges</span>
+            <span>My network</span>
+            <span>My bookmarks</span>
+        </div>
+    </div>
+    <hr>
+    <main>
+        <div class="first_row">
+            <div class="container_num1">
+                <img src="avatar.png" alt="avatar" width="100px">
+                <h2>Aruzhan</h2>
+                <img src="box.png" alt="box" width="200px">
+            </div>
+            <div class="container_num2">
+                <h2>Credits</h2>
+                <div class="queue">
+                    <h4 style="color: gray;">Design</h4>
+                    <h3>0</h3>
+                </div>
+                <div class="queue">
+                    <h4 style="color: gray;">Premium</h4>
+                    <h3>0</h3>
+                </div>
+                <div class="queue">
+                    <h4 style="color: gray;">AI report</h4>
+                    <h3>2</h3>
+                </div>
+            </div>
+            <div class="container_num3">
+                <h2>Followed tags</h2>
+                <h4 style="color: gray;">Follow lorem ipsum, interested in <br> sit amet consectetur in your<br> feed</h4>
+                <button style="background-color: rgb(250, 46, 46); border-radius: 25px; color: white; text-transform: uppercase; border: none; padding: 12px; width: 250px; cursor: pointer;">explore tags</button>
+            </div>
+        </div>
+    
+        <div class="second_row">
+            <div class="first_container">
+                <div class="txt">
+                <span style="color: rgb(1, 1, 175);"> My feed</span>
+                <span style="color: gray;">Latest feedback</span>
+                </div>
+                <button style="background-color: rgb(250, 46, 46); border-radius: 25px; color: white; text-transform: uppercase; border: none; padding: 12px; width: 150px; cursor: pointer;">submit a solution</button>
+            </div>
+            <div class="second_container">
+                <h2>Your feed is empty at the moment</h2>
+                <p>To lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel molestiae fuga at perferendis! Iure error quae quis et assumenda sunt excepturi, incidunt repellendus dignissimos Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="under">
+                    <div class="left">
+                        <img src="image.png" alt="image" width="400px">
+                    </div>
+                    <div class="right">
+                        <img src="newbie.png" alt="newbie" width="100px">
+                        <h2>Getting started on <br>
+                        Frontend Mentor</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam minus, perferendis officia laudantium natus recusandae voluptatibus ab saepe maiores quisquam placeat corporis repellat ad tempora aliquam asperiores. Animi inventore voluptates minus ipsa assumenda, placeat omnis, veniam consequatur optio soluta porro eius eos sapiente molestias earum aperiam doloribus voluptatum debitis repudiandae!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third_row">
+            <img src="box1.png" alt="box" width="350px" style="border-radius: 15px;">
+            <img src="box2.png" alt="box2" width="350px" style="border-radius: 15px;">
+        </div>
+    </main>
+
+    <script>
+        const together = document.querySelectorAll(".together")
+        together.forEach(item => {
+            const arrows = item.querySelector(".arrows")
+            const nav = item.querySelector("nav")
+            arrows.addEventListener("click", () =>{
+                arrows.classList.toggle("active");
+                nav.classList.toggle("active")
+            })
+        });
+    </script>
+
+</body>
+</html>
